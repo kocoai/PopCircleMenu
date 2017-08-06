@@ -11,7 +11,7 @@ import PopCircleMenu
 
 class ViewController: UIViewController, CircleMenuDelegate {
     
-    @IBOutlet var popMenuView: PopCirCleMenuView!
+    @IBOutlet var popMenuView: PopCircleMenuView!
     
     let items: [(icon: String, color: UIColor, text: String)] = [
         ("icon_home", UIColor(red:0.19, green:0.57, blue:1, alpha:1), "home"),

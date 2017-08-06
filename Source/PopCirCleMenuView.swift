@@ -1,5 +1,5 @@
 //
-//  PopCirCleMenuView.swift
+//  PopCircleMenuView.swift
 //  CircleMenu
 //
 //  Created by 刘业臻 on 16/7/2.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-public class PopCirCleMenuView: UIView, UIGestureRecognizerDelegate {
+public class PopCircleMenuView: UIView, UIGestureRecognizerDelegate {
 
     public var circleButton: CircleMenu?
 
     private weak var selectedButton: CircleMenuButton?
 
     private lazy var longPressGestureRecognizer: UILongPressGestureRecognizer = {
-        let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(PopCirCleMenuView.onPress(sender:)))
+        let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(PopCircleMenuView.onPress(sender:)))
         recognizer.delegate = self
         return recognizer
     }()
