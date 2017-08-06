@@ -9,7 +9,7 @@
 import UIKit
 import PopCircleMenu
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CircleMenuDelegate {
     
     @IBOutlet var popMenuView: PopCirCleMenuView!
     
@@ -32,10 +32,10 @@ class ViewController: UIViewController {
         popMenuView.circleButton?.distance = 105
         
         //Delay between show buttons
-        popMenuView.circleButton?.showDelay = 0.03
+        popMenuView.circleButton?.showDelay = 0.0
         
         //Animation Duration
-        popMenuView.circleButton?.duration = 0.8
+        popMenuView.circleButton?.duration = 1
         
         guard let button = popMenuView.circleButton else {return}
         button.layer.cornerRadius = button.bounds.size.width / 2.0
@@ -43,19 +43,18 @@ class ViewController: UIViewController {
 
     func circleMenu(circleMenu: CircleMenu, willDisplay button: CircleMenuButton, atIndex: Int) {
         //set color
-        button.backgroundColor = UIColor.lightGrayColor()
-        button.setImage(UIImage(imageLiteral: items[atIndex].icon), forState: .Normal)
+        button.backgroundColor = UIColor.lightGray
+        button.setImage(UIImage(named: items[atIndex].icon), for: .normal)
         button.layer.borderWidth = 5.0
-        button.layer.borderColor = UIColor.whiteColor().CGColor
+        button.layer.borderColor = UIColor.white.cgColor
         
         // set highlited image
-        let highlightedImage  = UIImage(imageLiteral: items[atIndex].icon).imageWithRenderingMode(.AlwaysTemplate)
-        button.setImage(highlightedImage, forState: .Highlighted)
-        button.tintColor = UIColor.init(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.3)
+        let highlightedImage  = UIImage(named: items[atIndex].icon)?.withRenderingMode(.alwaysTemplate)
+        button.setImage(highlightedImage, for: .highlighted)
+        button.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
         
         //set text
-        guard let textLabel = button.textLabel else {return}
-        textLabel.text = items[atIndex].text
+        button.setTitle(items[atIndex].text, for: .normal)
         
     }
     

@@ -15,7 +15,7 @@ public class PopCirCleMenuView: UIView, UIGestureRecognizerDelegate {
     private weak var selectedButton: CircleMenuButton?
 
     private lazy var longPressGestureRecognizer: UILongPressGestureRecognizer = {
-        let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(PopCirCleMenuView.onPress(_:)))
+        let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(PopCirCleMenuView.onPress(sender:)))
         recognizer.delegate = self
         return recognizer
     }()
@@ -23,80 +23,73 @@ public class PopCirCleMenuView: UIView, UIGestureRecognizerDelegate {
     init(frame: CGRect, buttonSize: CGSize, buttonsCount: Int = 3, duration: Double = 2,
          distance: Float = 100) {
         super.init(frame: frame)
-
         let rect     = CGRect(x: 0.0, y: 0.0, width: buttonSize.width, height: buttonSize.height)
         circleButton = CircleMenu(frame: rect, buttonsCount: buttonsCount, duration: duration, distance: distance)
         guard let circleButton = circleButton else {return}
         addSubview(circleButton)
-
         addGestureRecognizer(longPressGestureRecognizer)
 
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-
         setup()
-
         addGestureRecognizer(longPressGestureRecognizer)
 
     }
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-
         setup()
-
         addGestureRecognizer(longPressGestureRecognizer)
-
     }
 
-    func onPress(sender: UILongPressGestureRecognizer) {
+    @objc func onPress(sender: UILongPressGestureRecognizer) {
         guard let circleButton = circleButton else {return}
-        circleButton.backgroundColor = UIColor.clearColor()
+        circleButton.backgroundColor = UIColor.clear
 
         //circleButton.layer.borderColor = UIColor.color(255, green: 22, blue: 93, alpha: 1.0).CGColor
         circleButton.layer.borderWidth = 7.0
-        bringSubviewToFront(circleButton)
+        bringSubview(toFront: circleButton)
 
         let buttonWidth = circleButton.bounds.width
 
-        if sender.state == .Began {
-            circleButton.center = sender.locationInView(self)
+        if sender.state == .began {
+            circleButton.center = sender.location(in: self)
             circleButton.onTap()
-            circleButton.hidden = false
-        } else if sender.state == .Changed {
+            circleButton.isHidden = false
+        } else if sender.state == .changed {
             guard let buttons = circleButton.buttons else {return}
             for button in buttons {
                 guard let textLabel = button.textLabel else {return}
-                let distance = button.center.distanceTo(sender.locationInView(button))
+                let distance = button.center.distanceTo(pointB: sender.location(in: button))
 
                 if distance <= buttonWidth / 2.0 {
                     let color = circleButton.highlightedBorderColor
 
-                    button.changeDistance(CGFloat(circleButton.distance) + 15.0, animated: true)
-                    button.layer.borderColor = color.CGColor
+                    button.changeDistance(distance: CGFloat(circleButton.distance) + 25.0)
+                    button.layer.borderColor = color.cgColor
 
                     selectedButton   = button
-                    textLabel.hidden = false
+                    textLabel.isHidden = false
 
-                } else if distance >= 15.0 + buttonWidth / 2.0 {
+                } else if distance >= 25 + buttonWidth / 2.0 {
                     let color = circleButton.normalBorderColor
 
-                    button.changeDistance(CGFloat(circleButton.distance), animated: false)
-                    button.layer.borderColor = color.CGColor
+                    button.changeDistance(distance: CGFloat(circleButton.distance))
+                    button.layer.borderColor = color.cgColor
 
-                    textLabel.hidden = true
+                    textLabel.isHidden = true
 
                 }
             }
 
-        } else if sender.state == .Ended {
+        } else if sender.state == .ended {
             let duration = circleButton.duration
             if let button = selectedButton {
-                let distance = button.center.distanceTo(sender.locationInView(button))
+                let distance = button.center.distanceTo(pointB: sender.location(in: button))
                 if distance <= button.bounds.width / 2.0 {
-                    circleButton.buttonHandler(button)
+                    circleButton.buttonHandler(sender: button)
 
                 } else {
                     circleButton.onTap()

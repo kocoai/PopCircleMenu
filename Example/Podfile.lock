@@ -1,19 +1,21 @@
 PODS:
-  - PopCircleMenu (0.1)
+  - PopCircleMenu (0.1.1)
 
 DEPENDENCIES:
-  - PopCircleMenu (from `https://github.com/luiyezheng/PopCircleMenu.git`)
+  - PopCircleMenu (from `https://github.com/kocoai/PopCircleMenu.git`)
 
 EXTERNAL SOURCES:
   PopCircleMenu:
-    :git: https://github.com/luiyezheng/PopCircleMenu.git
+    :git: https://github.com/kocoai/PopCircleMenu.git
 
 CHECKOUT OPTIONS:
   PopCircleMenu:
-    :commit: f954d33eeca77d20954d4600ba2c069638ede41c
-    :git: https://github.com/luiyezheng/PopCircleMenu.git
+    :commit: c75925dfaf12fd6234f4b63ec6f6c35f5fcb34fb
+    :git: https://github.com/kocoai/PopCircleMenu.git
 
 SPEC CHECKSUMS:
-  PopCircleMenu: a70376eccd790ce3a5fa07a02fd20675a840c210
+  PopCircleMenu: 01c3ca448cb3115650e7673e11b9733534a0bf11
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: a5999f98a4d89bd5386b9a159596495aeef8a6df
+
+COCOAPODS: 1.3.0

@@ -18,23 +18,13 @@ extension CGPoint {
     }
 }
 
-extension UIColor {
-    static func color(red: Int, green: Int, blue: Int, alpha: Float) -> UIColor {
-        return UIColor(
-            colorLiteralRed: Float(1.0) / Float(255.0) * Float(red),
-            green: Float(1.0) / Float(255.0) * Float(green),
-            blue: Float(1.0) / Float(255.0) * Float(blue),
-            alpha: alpha)
-    }
-}
-
 internal extension Float {
     var radians: Float {
-        return self * (Float(180) / Float(M_PI))
+        return self * (Float(180) / Float(Double.pi))
     }
 
     var degrees: Float {
-        return self  * Float(M_PI) / 180.0
+        return self  * Float(Double.pi) / 180.0
     }
 }
 
