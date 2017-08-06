@@ -11,9 +11,8 @@ import UIKit
 
 // MARK: helpers
 
-@warn_unused_result
-func Init<Type>(value: Type, @noescape block: (object: Type) -> Void) -> Type {
-    block(object: value)
+func Init<Type>(value: Type, block: (_ object: Type) -> Void) -> Type {
+    block(value)
     return value
 }
 
@@ -31,7 +30,7 @@ func Init<Type>(value: Type, @noescape block: (object: Type) -> Void) -> Type {
      - parameter button:     A circle menu button object that circle menu is going to use when drawing the row. Don't change button.tag
      - parameter atIndex:    An button index.
      */
-    optional func circleMenu(circleMenu: CircleMenu, willDisplay button: CircleMenuButton, atIndex: Int)
+    @objc optional func circleMenu(circleMenu: CircleMenu, willDisplay button: CircleMenuButton, atIndex: Int)
 
     /**
      Tells the delegate that a specified index is about to be selected.
@@ -40,7 +39,7 @@ func Init<Type>(value: Type, @noescape block: (object: Type) -> Void) -> Type {
      - parameter button:     A selected circle menu button. Don't change button.tag
      - parameter atIndex:    Selected button index
      */
-    optional func circleMenu(circleMenu: CircleMenu, buttonWillSelected button: CircleMenuButton, atIndex: Int)
+    @objc optional func circleMenu(circleMenu: CircleMenu, buttonWillSelected button: CircleMenuButton, atIndex: Int)
 
     /**
      Tells the delegate that the specified index is now selected.
@@ -49,7 +48,7 @@ func Init<Type>(value: Type, @noescape block: (object: Type) -> Void) -> Type {
      - parameter button:     A selected circle menu button. Don't change button.tag
      - parameter atIndex:    Selected button index
      */
-    optional func circleMenu(circleMenu: CircleMenu, buttonDidSelected button: CircleMenuButton, atIndex: Int)
+    @objc optional func circleMenu(circleMenu: CircleMenu, buttonDidSelected button: CircleMenuButton, atIndex: Int)
 }
 
 // MARK: CircleMenu
@@ -68,12 +67,12 @@ public class CircleMenu: UIButton {
     /// Delay between show buttons
     public var showDelay: Double = 0.0
     /// Highlighted border Color
-    public var highlightedBorderColor: UIColor = UIColor.color(255, green: 22, blue: 93, alpha: 1.0)
+    public var highlightedBorderColor: UIColor = UIColor(red: 255, green: 22, blue: 93, alpha: 1.0)
     /// Normal border Color
-    public var normalBorderColor: UIColor = UIColor.whiteColor()
+    public var normalBorderColor: UIColor = UIColor.white
 
     /// The object that acts as the delegate of the circle menu.
-    @IBOutlet weak public var delegate: AnyObject? //CircleMenuDelegate?
+    @IBOutlet weak public var delegate: CircleMenuDelegate?
 
     var buttons: [CircleMenuButton]?
 
@@ -110,10 +109,10 @@ public class CircleMenu: UIButton {
 
     private func commonInit() {
         translatesAutoresizingMaskIntoConstraints = true
-        layer.borderColor = highlightedBorderColor.colorWithAlphaComponent(0.5).CGColor
+        layer.borderColor = highlightedBorderColor.withAlphaComponent(0.5).cgColor
 
-        setImage(UIImage(), forState: .Normal)
-        setImage(UIImage(), forState: .Selected)
+        setImage(UIImage(), for: .normal)
+        setImage(UIImage(), for: .selected)
     }
 
     // MARK: methods
@@ -130,9 +129,8 @@ public class CircleMenu: UIButton {
         }
 
         buttonsAnimationIsShow(isShow: false, duration: duration, hideDelay: hideDelay)
-
         tapBounceAnimation()
-        tapRotatedAnimation(0.3, isSelected: false)
+        tapRotatedAnimation(duration: 0.3, isSelected: false)
     }
 
     /**
@@ -162,9 +160,9 @@ public class CircleMenu: UIButton {
             let angle: Float = (Float(index) * step) / 2.5
             let distance = Float(self.bounds.size.height/2.0)
             let size = CGSize(width: self.bounds.width, height: self.bounds.height)
-            let button = Init(CircleMenuButton(size: size, circleMenu: self, distance:distance, angle: angle, index: index)) {
+            let button = Init(value: CircleMenuButton(size: size, circleMenu: self, distance:distance, angle: angle, index: index)) {
                 $0.tag = index
-                $0.addTarget(self, action: #selector(CircleMenu.buttonHandler(_:)), forControlEvents: UIControlEvents.TouchDragExit)
+                $0.addTarget(self, action: #selector(CircleMenu.buttonHandler(sender:)), for: UIControlEvents.touchDragExit)
                 $0.alpha = 0
             }
             buttons.append(button)
@@ -184,40 +182,36 @@ public class CircleMenu: UIButton {
 
         let duration  = isShow ? self.duration : min(0.2, self.duration)
         buttonsAnimationIsShow(isShow: isShow, duration: duration)
-
         tapBounceAnimation()
-        tapRotatedAnimation(Float(duration), isSelected: isShow)
+        tapRotatedAnimation(duration: Float(duration), isSelected: isShow)
     }
 
-    internal func buttonHandler(sender: UIButton) {
+    @objc internal func buttonHandler(sender: UIButton) {
         guard case let sender as CircleMenuButton = sender else {
             return
         }
 
-        delegate?.circleMenu?(self, buttonWillSelected: sender, atIndex: sender.tag)
+        delegate?.circleMenu?(circleMenu: self, buttonWillSelected: sender, atIndex: sender.tag)
 
 
         if let container = sender.container { // rotation animation
-            container.superview?.bringSubviewToFront(container)
+            container.superview?.bringSubview(toFront: container)
         }
 
         if let _ = buttons {
             hideCenterButton(duration: min(duration, 0.2))
-
             buttonsAnimationIsShow(isShow: false, duration: min(duration, 0.2), hideDelay: 0.0)
         }
 
-        let dispatchTime: dispatch_time_t = dispatch_time(
-            DISPATCH_TIME_NOW,
-            Int64(min(duration, 0.2) * Double(NSEC_PER_SEC)))
+        let dispatchTime = DispatchTime.now() + min(duration, 0.2) * Double(NSEC_PER_SEC)
 
-        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
-            self.delegate?.circleMenu?(self, buttonDidSelected: sender, atIndex: sender.tag)
-        })
+        DispatchQueue.main.asyncAfter(deadline: dispatchTime) {
+            self.delegate?.circleMenu?(circleMenu: self, buttonDidSelected: sender, atIndex: sender.tag)
+        }
     }
 
     // MARK: animations
-    private func buttonsAnimationIsShow(isShow isShow: Bool, duration: Double, hideDelay: Double = 0) {
+    private func buttonsAnimationIsShow(isShow: Bool, duration: Double, hideDelay: Double = 0) {
         guard let buttons = self.buttons else {
             return
         }
@@ -227,7 +221,7 @@ public class CircleMenu: UIButton {
             let button = buttons[index]
             let angle: Float = Float(index) * step
             if isShow == true {
-                delegate?.circleMenu?(self, willDisplay: button, atIndex: index)
+                delegate?.circleMenu?(circleMenu: self, willDisplay: button, atIndex: index)
 
                 button.rotatedZ(angle: angle, animated: false, delay: Double(index) * showDelay, distance: distance)
                 button.showAnimation(distance: distance, duration: duration, delay: Double(index) * showDelay)
@@ -244,26 +238,25 @@ public class CircleMenu: UIButton {
     }
 
     private func tapBounceAnimation() {
-        self.transform = CGAffineTransformMakeScale(0.9, 0.9)
-        UIView.animateWithDuration(duration, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 5,
-                                   options: UIViewAnimationOptions.CurveLinear,
+        self.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 5,
+                       options: UIViewAnimationOptions.curveLinear,
                                    animations: { () -> Void in
-                                    self.transform = CGAffineTransformMakeScale(1, 1)
+                                    self.transform = CGAffineTransform(scaleX: 1, y: 1)
             },
                                    completion: nil)
     }
 
     private func tapRotatedAnimation(duration: Float, isSelected: Bool) {
-
-        selected = isSelected
+        self.isSelected = isSelected
         self.alpha = 1.0
     }
 
-    internal func hideCenterButton(duration duration: Double, delay: Double = 0) {
-        UIView.animateWithDuration( NSTimeInterval(duration), delay: NSTimeInterval(delay),
-                                    options: UIViewAnimationOptions.CurveEaseOut,
+    internal func hideCenterButton(duration: Double, delay: Double = 0) {
+        UIView.animate( withDuration: TimeInterval(duration), delay: TimeInterval(delay),
+                        options: UIViewAnimationOptions.curveEaseOut,
                                     animations: { () -> Void in
-                                        self.transform = CGAffineTransformMakeScale(0.001, 0.001)
+                                        self.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
             }, completion: nil)
     }
 }

@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		086FDE876F501A2E107D149F18BAFACE /* PopCircleMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 660FEB693239E0B0AFD04B76AB452BF3 /* PopCircleMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22C82DB72401B346D34E2D9BC344D7F5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BEECE03635B597D686E05021067C09 /* Utility.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		3DEFD524B1436DFD85F39AA043CA137A /* PopCircleMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8399011918E1770A99E5AD232942F2A3 /* PopCircleMenu-dummy.m */; };
+		086FDE876F501A2E107D149F18BAFACE /* PopCircleMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 340C51252D8836E1F3055FF1C1AA11D2 /* PopCircleMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C82DB72401B346D34E2D9BC344D7F5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C988F1B0C55AEDA7F805425487A0DF5 /* Utility.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3DEFD524B1436DFD85F39AA043CA137A /* PopCircleMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31104A50CD1DFDD21439C8F37C94D460 /* PopCircleMenu-dummy.m */; };
 		3E67DD85B1BFADFA7409B479C62F06DB /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BDE82371C83FA9AE91B05F77ACAA36 /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C6B217720AD39690FDB932B25798E7D /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 699118D7DDD5F335E4FB8B17DC0F12D2 /* Pods-Example-dummy.m */; };
-		59B1F60231F07A51053DA2581FFB657E /* CircleMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98171AE44F2DA9A9553CB5C2FE99A13 /* CircleMenuButton.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7CC998EA45CCDF75B889140407841166 /* CircleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CD463F0FE06C700911087A07221BE4 /* CircleMenu.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		59B1F60231F07A51053DA2581FFB657E /* CircleMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6F097616FD7CD32A3072DC92E451E0 /* CircleMenuButton.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CC998EA45CCDF75B889140407841166 /* CircleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AFE3C5A9F6A6A28B69459A7AAD1ACD /* CircleMenu.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		97B8754336DCFFFD7C12C5CE603758F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		AD2BC337A490E79758424334BD1C3821 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		D0741E0F8DB1CB8172CE1E155B0F11C5 /* PopCirCleMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DFC82053E879F23BB628424487F047 /* PopCirCleMenuView.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D0741E0F8DB1CB8172CE1E155B0F11C5 /* PopCirCleMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442FD0228D8623C11A1ABD7FDF93123 /* PopCirCleMenuView.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,29 +31,29 @@
 
 /* Begin PBXFileReference section */
 		01E6907CF2644EB1CF8E23F708A3DA0B /* Pods-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-resources.sh"; sourceTree = "<group>"; };
-		0B3C06B62AF7997741F26026796ABC50 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		119072C64A19799964E1620D83F514FB /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
+		0B3C06B62AF7997741F26026796ABC50 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		119072C64A19799964E1620D83F514FB /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
+		126BD14E924C969AFA71494D9EB7919A /* PopCircleMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PopCircleMenu.modulemap; sourceTree = "<group>"; };
 		149054C495E8EC590CAB4C524133016F /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		2FF1ABFAFA94F6210A59ACC77277B326 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		48EAADC998440DAC7388943079B300DA /* PopCircleMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PopCircleMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C988F1B0C55AEDA7F805425487A0DF5 /* Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Source/Utility.swift; sourceTree = "<group>"; };
+		31104A50CD1DFDD21439C8F37C94D460 /* PopCircleMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PopCircleMenu-dummy.m"; sourceTree = "<group>"; };
+		328388A5C6F799E73366D68003E359B3 /* PopCircleMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PopCircleMenu.xcconfig; sourceTree = "<group>"; };
+		340C51252D8836E1F3055FF1C1AA11D2 /* PopCircleMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PopCircleMenu-umbrella.h"; sourceTree = "<group>"; };
+		37AFE3C5A9F6A6A28B69459A7AAD1ACD /* CircleMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleMenu.swift; path = Source/CircleMenu.swift; sourceTree = "<group>"; };
+		48EAADC998440DAC7388943079B300DA /* PopCircleMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PopCircleMenu.framework; path = PopCircleMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5442FD0228D8623C11A1ABD7FDF93123 /* PopCirCleMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopCirCleMenuView.swift; path = Source/PopCirCleMenuView.swift; sourceTree = "<group>"; };
 		552550F3F912264E5D073F8893691F88 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		660FEB693239E0B0AFD04B76AB452BF3 /* PopCircleMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PopCircleMenu-umbrella.h"; sourceTree = "<group>"; };
 		699118D7DDD5F335E4FB8B17DC0F12D2 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
 		764D33E23CE6C1111110B04F5CBADADB /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		8399011918E1770A99E5AD232942F2A3 /* PopCircleMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PopCircleMenu-dummy.m"; sourceTree = "<group>"; };
-		921AAAE32DEB1E73F85C18CDF43150BA /* PopCircleMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PopCircleMenu.modulemap; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		965FF1EE220E464617FC091BB33B8937 /* PopCircleMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PopCircleMenu.xcconfig; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96EAA710B198C20BF8ED53EBB15FA764 /* PopCircleMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PopCircleMenu-prefix.pch"; sourceTree = "<group>"; };
 		A661FECCEBFF9D01869EE3B29C4C1EFF /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BD7CD2ED23F4D651FE490AE4B6400AF2 /* PopCircleMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PopCircleMenu-prefix.pch"; sourceTree = "<group>"; };
-		C5CD463F0FE06C700911087A07221BE4 /* CircleMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleMenu.swift; path = Source/CircleMenu.swift; sourceTree = "<group>"; };
-		C8BEECE03635B597D686E05021067C09 /* Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Source/Utility.swift; sourceTree = "<group>"; };
+		BA6F097616FD7CD32A3072DC92E451E0 /* CircleMenuButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleMenuButton.swift; path = Source/CircleMenuButton.swift; sourceTree = "<group>"; };
 		C9BDE82371C83FA9AE91B05F77ACAA36 /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
+		D51698347EB7397D6BB890FD67AE8AF0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E512A5F985F876750237FD237C3AEEDA /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
-		E98171AE44F2DA9A9553CB5C2FE99A13 /* CircleMenuButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleMenuButton.swift; path = Source/CircleMenuButton.swift; sourceTree = "<group>"; };
 		EFFB74AAA6B2AE8DABF0E88E61E09178 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4DFC82053E879F23BB628424487F047 /* PopCirCleMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopCirCleMenuView.swift; path = Source/PopCirCleMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,38 +85,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		35C6312B85FD731A56DD7A39FBE598CD /* PopCircleMenu */ = {
+		40CFAC70B5743CCE5384A0E245E1F96C /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C5CD463F0FE06C700911087A07221BE4 /* CircleMenu.swift */,
-				E98171AE44F2DA9A9553CB5C2FE99A13 /* CircleMenuButton.swift */,
-				F4DFC82053E879F23BB628424487F047 /* PopCirCleMenuView.swift */,
-				C8BEECE03635B597D686E05021067C09 /* Utility.swift */,
-				4FC3523176908F8B01893586124B2BF9 /* Support Files */,
+				BBAF5FCF1161271AA902417E22030EA7 /* PopCircleMenu */,
 			);
-			path = PopCircleMenu;
-			sourceTree = "<group>";
-		};
-		36F89DC22C713AAB1F17822A2581C113 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				35C6312B85FD731A56DD7A39FBE598CD /* PopCircleMenu */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		4FC3523176908F8B01893586124B2BF9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2FF1ABFAFA94F6210A59ACC77277B326 /* Info.plist */,
-				921AAAE32DEB1E73F85C18CDF43150BA /* PopCircleMenu.modulemap */,
-				965FF1EE220E464617FC091BB33B8937 /* PopCircleMenu.xcconfig */,
-				8399011918E1770A99E5AD232942F2A3 /* PopCircleMenu-dummy.m */,
-				BD7CD2ED23F4D651FE490AE4B6400AF2 /* PopCircleMenu-prefix.pch */,
-				660FEB693239E0B0AFD04B76AB452BF3 /* PopCircleMenu-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PopCircleMenu";
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		6A4F6A14E3FB951290E4531728B7A461 /* Targets Support Files */ = {
@@ -131,11 +105,38 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				40CFAC70B5743CCE5384A0E245E1F96C /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				36F89DC22C713AAB1F17822A2581C113 /* Pods */,
 				14C6FACCC664311BD8485525A58792DB /* Products */,
 				6A4F6A14E3FB951290E4531728B7A461 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8861A1C17D2CACB55458402918C00989 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D51698347EB7397D6BB890FD67AE8AF0 /* Info.plist */,
+				126BD14E924C969AFA71494D9EB7919A /* PopCircleMenu.modulemap */,
+				328388A5C6F799E73366D68003E359B3 /* PopCircleMenu.xcconfig */,
+				31104A50CD1DFDD21439C8F37C94D460 /* PopCircleMenu-dummy.m */,
+				96EAA710B198C20BF8ED53EBB15FA764 /* PopCircleMenu-prefix.pch */,
+				340C51252D8836E1F3055FF1C1AA11D2 /* PopCircleMenu-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/PopCircleMenu";
+			sourceTree = "<group>";
+		};
+		BBAF5FCF1161271AA902417E22030EA7 /* PopCircleMenu */ = {
+			isa = PBXGroup;
+			children = (
+				37AFE3C5A9F6A6A28B69459A7AAD1ACD /* CircleMenu.swift */,
+				BA6F097616FD7CD32A3072DC92E451E0 /* CircleMenuButton.swift */,
+				5442FD0228D8623C11A1ABD7FDF93123 /* PopCirCleMenuView.swift */,
+				1C988F1B0C55AEDA7F805425487A0DF5 /* Utility.swift */,
+				8861A1C17D2CACB55458402918C00989 /* Support Files */,
+			);
+			name = PopCircleMenu;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -236,12 +237,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
-				TargetAttributes = {
-					954C3DA52D69B714C3990C452331D1CC = {
-						LastSwiftMigration = 0900;
-					};
-				};
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -294,45 +290,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		845310EDE5046317A4B811DF393FB20C /* Debug */ = {
+		1FCE07350FE6AF8DB8C78FA55A556366 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 965FF1EE220E464617FC091BB33B8937 /* PopCircleMenu.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PopCircleMenu/PopCircleMenu-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PopCircleMenu/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PopCircleMenu/PopCircleMenu.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = PopCircleMenu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8CE7C8B2D2BE13D475ED0A8B97308396 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 965FF1EE220E464617FC091BB33B8937 /* PopCircleMenu.xcconfig */;
+			baseConfigurationReference = 328388A5C6F799E73366D68003E359B3 /* PopCircleMenu.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -358,7 +318,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -376,9 +335,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -386,21 +343,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -419,7 +370,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
@@ -434,9 +384,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -444,20 +392,14 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -471,7 +413,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_VERSION = 4.0;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -481,7 +422,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 149054C495E8EC590CAB4C524133016F /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -521,7 +461,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E512A5F985F876750237FD237C3AEEDA /* Pods-Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -556,14 +495,49 @@
 			};
 			name = Release;
 		};
+		EAC4BEA2BAA351FE312B3E6252148770 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 328388A5C6F799E73366D68003E359B3 /* PopCircleMenu.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PopCircleMenu/PopCircleMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PopCircleMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PopCircleMenu/PopCircleMenu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PopCircleMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2374F41207B99E4BEE4B9C97386F2A6A /* Build configuration list for PBXNativeTarget "PopCircleMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				845310EDE5046317A4B811DF393FB20C /* Debug */,
-				8CE7C8B2D2BE13D475ED0A8B97308396 /* Release */,
+				EAC4BEA2BAA351FE312B3E6252148770 /* Debug */,
+				1FCE07350FE6AF8DB8C78FA55A556366 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
